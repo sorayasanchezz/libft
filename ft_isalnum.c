@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sosanche <sosanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 16:38:57 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/02 16:29:29 by sosanche         ###   ########.fr       */
+/*   Created: 2025/10/01 17:48:51 by sosanche          #+#    #+#             */
+/*   Updated: 2025/10/02 16:36:42 by sosanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+//#include <stdio.h>
+
+int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
 		return (1);
 	return (0);
 }
 /*
 int	main(void)
 {
-	 
+	printf("%d", ft_isalnum(6));
+	return (0);
 }
 */

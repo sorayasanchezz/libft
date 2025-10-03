@@ -6,11 +6,11 @@
 /*   By: sosanche <sosanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:19:40 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/01 17:23:46 by sosanche         ###   ########.fr       */
+/*   Updated: 2025/10/02 16:30:07 by sosanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c >= '9')
 		return (1);
