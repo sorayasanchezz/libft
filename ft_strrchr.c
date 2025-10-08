@@ -1,19 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 17:56:00 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/08 12:33:59 by soraya           ###   ########.fr       */
+/*   Created: 2025/10/06 18:53:59 by sosanche          #+#    #+#             */
+/*   Updated: 2025/10/08 11:31:15 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
 
-void	*ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s, size_t n);
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	while (s[i])
+		i++;
+	while (s[i] != s[0])
+	{
+		if (s[i] == c)
+			return (s[i]);
+		i--;
+	}
+	return (NULL);
+}
+/*
+int	main(void)
+{
+	printf("Soraya: %s\n", ft_strrchr("Hola ques tass laS", 'q'));
+	printf("Original: %s\n", strrchr("Hola ques tass laS", 'q'));
+	return (0);
+}
+*/

@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 17:56:00 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/08 12:33:59 by soraya           ###   ########.fr       */
+/*   Created: 2025/10/07 17:01:51 by sosanche          #+#    #+#             */
+/*   Updated: 2025/10/08 12:36:37 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t	i;
 
-void	*ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s, size_t n);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
+}
+/* 
+int	main(void)
+{
+	char	frase[2];
+	unsigned char	frase2[2];
+
+	frase[0] = 255;
+	frase2[0] = 255;
+
+	printf("char      : %d\n", frase[0]);
+    printf("unsigned  : %d\n", frase2[0]);
+
+	return (0);
+}
+ */

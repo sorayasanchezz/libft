@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sosanche <sosanche@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 18:15:48 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/08 14:13:20 by soraya           ###   ########.fr       */
+/*   Created: 2025/10/03 19:36:07 by sosanche          #+#    #+#             */
+/*   Updated: 2025/10/06 18:33:40 by sosanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	int		i;
+
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		if (((char *)s)[i] == c)
+			return (&((char *)s)[i]);
+		i++;
+	}
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	printf("%c", ft_toupper('b'));
+	printf ("%s", ft_strchr("N       ¡   0 soo00ULL", '\0'));
 	return (0);
 }
 */

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sosanche <sosanche@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 17:56:00 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/08 12:33:59 by soraya           ###   ########.fr       */
+/*   Created: 2025/10/03 19:11:51 by sosanche          #+#    #+#             */
+/*   Updated: 2025/10/03 19:33:45 by sosanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-
-void	*ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s, size_t n);
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}

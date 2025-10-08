@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosanche <sosanche@student.42.fr>          +#+  +:+       +#+        */
+/*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 16:38:57 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/02 16:29:29 by sosanche         ###   ########.fr       */
+/*   Updated: 2025/10/08 11:35:01 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	 
-}
-*/
