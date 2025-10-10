@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 19:36:07 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/10 21:56:29 by soraya           ###   ########.fr       */
+/*   Created: 2025/10/10 18:04:52 by soraya            #+#    #+#             */
+/*   Updated: 2025/10/10 21:46:06 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
+	size_t			i;
+	unsigned char	*unss;
 
 	i = 0;
-	while (s[i] != '\0')
+	unss = (unsigned char *)s;
+	while (i < n)
 	{
-		if ((s)[i] == c)
-			return (&((char *)s)[i]);
+		if (unss[i] == (unsigned char)c)
+			return (&unss[i]);
 		i++;
 	}
-	if (s[i] == 0)
-		return (&((char *)s)[i]);
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	printf ("%s", ft_strchr("N       ¡   0 soo00ULL", '\0'));
-	char *ptr = NULL;
-    printf("%s\n", strchr(ptr, 'a'));
-	return (0);
-}
-*/
