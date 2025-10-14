@@ -6,7 +6,7 @@
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:55:16 by soraya            #+#    #+#             */
-/*   Updated: 2025/10/10 21:42:11 by soraya           ###   ########.fr       */
+/*   Updated: 2025/10/14 14:57:10 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 		j++;
 	if (dsize <= i)
 		return (dsize + j);
+	else
+		dsize -= i;
 	temp = i + j;
 	j = 0;
-	while (src[j] && j < (dsize - i - 1))
+	while (src[j] && j < (dsize - 1))
 	{
 		dst[i] = src[j];
 		i++;
@@ -37,3 +39,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	dst[i] = 0;
 	return (temp);
 }
+/* 
+int main(void)
+{
+	char str[] = "pqrstuvwxyz";
+	ft_strlcat(str, "abcd", 0);
+	return (0);
+} */

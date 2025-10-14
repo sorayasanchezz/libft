@@ -6,7 +6,7 @@
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 18:53:59 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/10 22:00:15 by soraya           ###   ########.fr       */
+/*   Updated: 2025/10/14 15:48:39 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,16 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return (&((char *)s)[i]);
 		i--;
 	}
 	return (NULL);
 }
-/*
+/* 
 int	main(void)
 {
-	printf("Soraya: %s\n", ft_strrchr("Hola ques tass laS", 'q'));
-	printf("Original: %s\n", strrchr("Hola ques tass laS", 'q'));
+	printf("Soraya: %s\n", ft_strrchr("teste", 'e'));
 	return (0);
 }
-*/
+ */

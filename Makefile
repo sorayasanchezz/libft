@@ -1,6 +1,6 @@
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
-FILES = ft_isalpha.c ft_isalnum.c ft_isprint.c ft_toupper.c
+FILES = $(wildcard ft_*.c)
 OBJECTS = $(FILES:.c=.o)
 
 all: $(NAME)
