@@ -6,7 +6,7 @@
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 17:56:00 by sosanche          #+#    #+#             */
-/*   Updated: 2025/10/14 23:20:08 by soraya           ###   ########.fr       */
+/*   Updated: 2025/10/15 21:12:20 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <unistd.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -40,5 +41,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
