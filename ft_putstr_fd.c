@@ -6,7 +6,7 @@
 /*   By: soraya <soraya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 21:00:11 by soraya            #+#    #+#             */
-/*   Updated: 2025/10/15 21:02:24 by soraya           ###   ########.fr       */
+/*   Updated: 2025/10/17 13:35:28 by soraya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i] && fd)
+	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;
