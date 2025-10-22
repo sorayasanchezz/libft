@@ -24,7 +24,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
-bonus : $(NAME) $(BONUS_OBJECTS)
+bonus: $(NAME) $(BONUS_OBJECTS)
 	ar rs $(NAME) $(BONUS_OBJECTS)
 	touch bonus
 
