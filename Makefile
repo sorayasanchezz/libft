@@ -24,20 +24,22 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
-bonus: $(NAME) $(BONUS_OBJECTS)
+.bonus: $(NAME) $(BONUS_OBJECTS)
 	ar rs $(NAME) $(BONUS_OBJECTS)
-	touch bonus
+	touch .bonus
+
+bonus: .bonus
+	@echo "Bonus done."
 
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf *.o
-	rm -rf bonus
+	rm -rf $(OBJECTS) $(BONUS_OBJECTS)
+	rm -rf .bonus
 
 fclean: clean
-	rm -rf *.a
-	rm -rf a.out
+	rm -rf $(NAME)
 
 re: fclean all
 
